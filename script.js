@@ -63,6 +63,7 @@ const Transaction = {
 
         return income;
     },
+
     expenses() {
         let expense = 0;
         Transaction.all.forEach((transaction) => {
@@ -73,6 +74,7 @@ const Transaction = {
 
         return expense;
     },
+
     total() {
         return Transaction.incomes() + Transaction.expenses();
     },
@@ -88,6 +90,7 @@ const DOM = {
 
         DOM.transactionsContainer.appendChild(tr);
     },
+
     innerHTMLTransaction(transaction, index) {
         const CSSclass = transaction.amount > 0 ? "income" : "expense";
 
@@ -108,6 +111,7 @@ const DOM = {
 
         return html;
     },
+
     updateBalance() {
         document.getElementById("incomeDisplay").innerHTML =
             Utils.formatCurrency(Transaction.incomes());
@@ -116,6 +120,7 @@ const DOM = {
         document.getElementById("totalDisplay").innerHTML =
             Utils.formatCurrency(Transaction.total());
     },
+
     clearTransactions() {
         DOM.transactionsContainer.innerHTML = "";
     },
@@ -125,7 +130,7 @@ const Utils = {
     formatAmount(value) {
         value = Number(value) * 100;
 
-        return value;
+        return Math.round(value);
     },
 
     formatDate(date) {
