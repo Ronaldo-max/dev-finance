@@ -1,11 +1,15 @@
-# DEV-FINANCE
+# Dev finance
 
-## PROJECT FOR FINANCE MANAGEMENT DEVELOPED DURING THE DISCOVER MARATHON
+### Project for finance management developed during the discover marathon
 
 <img src="dev-finance.gif">
 
-## TECHNOLOGIES
+## Technologies
 
 - HTML
 - CSS
 - JAVASCRIPT
+
+## License
+
+This project is under the MIT license. See the [LICENSE](LICENSE) file for more details.
